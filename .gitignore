@@ -1,0 +1,13 @@
+# Paths
+CSharpTraining/bin/
+CSharpTraining/obj/
+.vs/CSharpTraining/v17/
+
+# Specific Files
+
+# General Files
+*.json
+*.vsidx
+*.cache
+*.editorconfig
+
