@@ -234,3 +234,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Custom
+.vs
+*.lock
+*.json
+*.props
+CSharpTraining/obj
