@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CiIluta\\source\\repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj": {}
+    "C:\\Users\\CiIluta\\Source\\Repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CiIluta\\source\\repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj": {
+    "C:\\Users\\CiIluta\\Source\\Repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CiIluta\\source\\repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj",
+        "projectUniqueName": "C:\\Users\\CiIluta\\Source\\Repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj",
         "projectName": "CSharpTraining",
-        "projectPath": "C:\\Users\\CiIluta\\source\\repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj",
+        "projectPath": "C:\\Users\\CiIluta\\Source\\Repos\\CSharpTraining\\CSharpTraining\\CSharpTraining.csproj",
         "packagesPath": "C:\\Users\\CiIluta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CiIluta\\source\\repos\\CSharpTraining\\CSharpTraining\\obj\\",
+        "outputPath": "C:\\Users\\CiIluta\\Source\\Repos\\CSharpTraining\\CSharpTraining\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CiIluta\\AppData\\Roaming\\NuGet\\NuGet.Config",
