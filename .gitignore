@@ -241,3 +241,6 @@ FodyWeavers.xsd
 *.json
 *.props
 CSharpTraining/obj
+*.dll
+*.exe
+*.pdb
