@@ -4,7 +4,7 @@ namespace CSharpTraining {
     class Program {
         static void Main(string[] args)
         {
-            HomeworkOne.Run();
+            HomeworkTwo.Run();
         }
     }
 }
