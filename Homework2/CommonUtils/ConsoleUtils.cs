@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpTraining.Homeworks.CommonUtils
+namespace Homework2.CommonUtils
 {
     internal class ConsoleUtils
     {
 
-        public static void SetConsoleColor (ConsoleColor color)
+        public static void SetConsoleColor(ConsoleColor color)
         {
             Console.ForegroundColor = color;
         }

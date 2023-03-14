@@ -1,4 +1,4 @@
-﻿using CSharpTraining.Homeworks.CommonUtils;
+﻿using Homework2.CommonUtils;
 
 class HomeworkTwo {
     public static void Run()
