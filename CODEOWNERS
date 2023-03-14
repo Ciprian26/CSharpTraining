@@ -1,0 +1,5 @@
+# This file defines the code owners for the project
+# Each entry lists the file or directory and the GitHub username of the owner
+
+# Set a default owner for all files
+*       @Ciprian26
