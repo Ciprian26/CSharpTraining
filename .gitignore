@@ -240,7 +240,7 @@ FodyWeavers.xsd
 *.lock
 *.json
 *.props
-CSharpTraining/obj
+*/obj
 *.dll
 *.exe
 *.pdb
