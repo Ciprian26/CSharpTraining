@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace CSharpTraining {
+﻿namespace CSharpTraining {
     class Program {
         static void Main(string[] args)
         {
-            HomeworkTwo.Run();
+            HomeworkOne.Run();
         }
     }
 }

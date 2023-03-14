@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpTraining.Homeworks.CommonUtils {
-    internal class InputUtils {
+namespace Homework2.CommonUtils
+{
+    internal class InputUtils
+    {
 
         public static int GetNumber()
         {
@@ -16,7 +18,7 @@ namespace CSharpTraining.Homeworks.CommonUtils {
             Console.Write("Please enter a number between " + Min + " and " + Max + ":");
             int number = int.Parse(Console.ReadLine());
 
-            while(number < Min || number > Max)
+            while (number < Min || number > Max)
             {
                 Console.Write("Invalid input. Please enter a number between " + Min + " and " + Max + ":");
                 number = int.Parse(Console.ReadLine());
