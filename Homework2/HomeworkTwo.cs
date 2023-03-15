@@ -7,7 +7,7 @@ class HomeworkTwo {
         do
         {
             selectedTask = DisplayAndSelectTaskNumberToRun();
-            switch (selectedTask)
+            switch(selectedTask)
             {
                 case 0:
                     Console.WriteLine("Exiting...");
@@ -25,22 +25,22 @@ class HomeworkTwo {
                     SumOfEvenFibonacciNumbers();
                     break;
                 case 5:
-                    FindSecondLargestElement();
-                    break;
-                case 6:
                     FindSumOfDigits();
                     break;
-                case 7:
+                case 6:
                     ConvertBinaryToDecimal();
                     break;
-                case 8:
+                case 7:
                     FindOptimalBinaryRepresentation();
+                    break;
+                case 8:
+                    FindSecondLargestElement();
                     break;
                 default:
                     Console.WriteLine("Invalid input. Please try again.");
                     break;
             }
-        } while (selectedTask != 0);
+        } while(selectedTask != 0);
     }
 
     private static int DisplayAndSelectTaskNumberToRun()
@@ -51,12 +51,13 @@ class HomeworkTwo {
                   "2. Check if year is leap\n" +
                   "3. Check what is 47th prime number\n" +
                   "4. Fibonacci even-numbers sum that not exceed 1000\n" +
-                  "5. Second largest element in an array\n" +
-                  "6. Find the sum of digits of a number read from the keyboard.\n" +
-                  "7. Convert Binary 10011010 to Decimal number system.\n" +
+                  "5. Find the sum of digits of a number read from the keyboard.\n" +
                   "0. Exit\n\n" +
-                  "Bonus:\n" +
-                  "8. Challenge - Find an optimal solution to the code that converts a decimal to binary.\n\n" +
+                  "-Challenge:\n" +
+                  "6. Convert Binary 10011010 to Decimal number system.\n" +
+                  "7. Challenge - Find an optimal solution to the code that converts a decimal to binary.\n\n" +
+                  "-Removed previously but working:\n" +
+                  "8. Second largest element in an array\n\n" +
                   "\nEnter task number");
 
         ConsoleUtils.SetConsoleColor(ConsoleColor.Green);
@@ -68,7 +69,7 @@ class HomeworkTwo {
         ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
         Console.WriteLine("Enter a number to check if it's divisible by 7 and 11: ");
         int number = InputUtils.GetNumber();
-        if (number % 7 == 0 && number % 11 == 0)
+        if(number % 7 == 0 && number % 11 == 0)
         {
             Console.WriteLine($"Number {number} is divisible by 7 and 11");
         }
@@ -83,7 +84,7 @@ class HomeworkTwo {
         ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
         int year = InputUtils.GetNumberInRange(1, 20000);
 
-        if (year % 4 == 0)
+        if(year % 4 == 0)
         {
             Console.WriteLine($"{year} is leap.");
 
@@ -104,14 +105,14 @@ class HomeworkTwo {
         int primeCount = 0;
         int currentNumber = FirstPrimeNumber;
 
-        while (primeCount < TargetPrimeCount)
+        while(primeCount < TargetPrimeCount)
         {
-            if (NumberUtils.IsPrime(currentNumber))
+            if(NumberUtils.IsPrime(currentNumber))
             {
                 primeCount++;
             }
 
-            if (primeCount == TargetPrimeCount)
+            if(primeCount == TargetPrimeCount)
             {
                 Console.WriteLine($"The {TargetPrimeCount}th prime number is: {currentNumber}");
                 break;
@@ -127,9 +128,9 @@ class HomeworkTwo {
 
         int limit = 1000, sum = 0, previousFibonnaciNumber = 0, fibonnaciNumber = 1;
 
-        while (fibonnaciNumber <= limit)
+        while(fibonnaciNumber <= limit)
         {
-            if (fibonnaciNumber % 2 == 0)
+            if(fibonnaciNumber % 2 == 0)
             {
                 sum += fibonnaciNumber;
             }
