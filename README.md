@@ -13,7 +13,7 @@ The C# Training Program is designed to provide a solid foundation in C# programm
 
 This repository contains homework assignments for the C# Training Program. Each homework assignment is contained within its own directory and includes a README file with instructions for completing the assignment.
 
-Contact
+# Contact
 If you have any questions about my homework, please contact me on Teams (if you are from endava): Ciprian Iluta.
 
 Happy coding!
