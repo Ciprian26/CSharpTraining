@@ -242,5 +242,4 @@ FodyWeavers.xsd
 *.props
 */obj
 *.dll
-*.exe
 *.pdb
