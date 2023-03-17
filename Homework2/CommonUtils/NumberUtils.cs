@@ -19,15 +19,15 @@
 
         public static int[] GetNumberDigits(int number)
         {
-            int index = 0;
             int[] digits = new int[number.ToString().Length];
-            while (number > 0)
+            int index = 0;
+            while(number > 0)
             {
                 digits[index] = number % 10;
                 number /= 10;
                 index++;
             }
-            digits = (int[])digits.Reverse();
+            Array.Reverse(digits);
             return digits;
         }
 

@@ -15,11 +15,15 @@ namespace Homework2 {
                         break;
                     case 1:
                         Console.WriteLine("Check that number is divided by 7 and 11.");
-                        CheckIfNumberIsDivisibleBy7and11();
+                        ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
+                        Console.WriteLine("Enter a number to check if it's divisible by 7 and 11: ");
+                        int number = InputUtils.GetNumberInRange(int.MinValue, int.MaxValue);
+                        CheckIfNumberIsDivisibleBy7and11(number);
                         break;
                     case 2:
                         Console.WriteLine("Check if year is leap.");
-                        CheckIfYearIsLeap();
+                        int year = InputUtils.GetNumberInRange(int.MinValue, int.MaxValue);
+                        CheckIfYearIsLeap(year);
                         break;
                     case 3:
                         Console.WriteLine("Check what is 47th prime number.");
@@ -31,19 +35,26 @@ namespace Homework2 {
                         break;
                     case 5:
                         Console.WriteLine("Find the sum of digits of a number read from the keyboard.");
-                        FindSumOfDigits();
+                        int num = InputUtils.GetNumberInRange(1, int.MaxValue);
+                        FindSumOfDigits(num);
                         break;
                     case 6:
                         Console.WriteLine("Convert Binary 10011010 to Decimal number system.");
-                        ConvertBinaryToDecimal();
+                        String binaryNumber = "10011010";
+                        ConvertBinaryToDecimal(binaryNumber);
                         break;
                     case 7:
                         Console.WriteLine("Find an optimal solution to the code that converts a decimal to binary.");
-                        FindOptimalBinaryRepresentation();
+                        int decimalNumber = InputUtils.GetNumberInRange(0, int.MaxValue);
+                        FindOptimalBinaryRepresentation(decimalNumber);
                         break;
                     case 8:
-                        Console.WriteLine("Exiting...");
-                        FindSecondLargestElement();
+                        Console.WriteLine("Enter the length of the array");
+                        int arrayLength = InputUtils.GetNumberInRange(2, 10);
+
+                        int[] arr = new int[arrayLength];
+                        NumberUtils.SetArrayElements(arr);
+                        FindSecondLargestElement(arr);
                         break;
                     default:
                         Console.WriteLine("Invalid task number. Please try again.");
@@ -73,11 +84,8 @@ namespace Homework2 {
             return InputUtils.GetNumberInRange(0, 8);
         }
 
-        private static void CheckIfNumberIsDivisibleBy7and11()
+        private static void CheckIfNumberIsDivisibleBy7and11(int number)
         {
-            ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-            Console.WriteLine("Enter a number to check if it's divisible by 7 and 11: ");
-            int number = InputUtils.GetNumber();
             if(number % 7 == 0 && number % 11 == 0)
             {
                 Console.WriteLine($"Number {number} is divisible by 7 and 11");
@@ -88,10 +96,9 @@ namespace Homework2 {
             }
         }
 
-        private static void CheckIfYearIsLeap()
+        private static void CheckIfYearIsLeap(int year)
         {
             ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-            int year = InputUtils.GetNumberInRange(int.MinValue, int.MaxValue);
 
             if(year % 4 == 0)
             {
@@ -151,44 +158,26 @@ namespace Homework2 {
             Console.WriteLine("The sum of the even-valued numbers in the Fibonacci sequence up to 1000 is: " + sum);
         }
 
-        private static void FindSecondLargestElement()
+        private static void FindSumOfDigits(int number)
         {
             ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-            Console.WriteLine("Enter the length of the array");
-            int n = InputUtils.GetNumberInRange(2, 10);
-
-            int[] arr = new int[n];
-
-            NumberUtils.SetArrayElements(arr);
-
-            int[] sortedArray = arr.OrderByDescending(n => n).ToArray();
-
-            Console.WriteLine($"Second largest number in given array is: {sortedArray[1]}");
-        }
-
-        private static void FindSumOfDigits()
-        {
-            ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-            int number = InputUtils.GetNumberInRange(1, int.MaxValue);
             int[] digits = NumberUtils.GetNumberDigits(number);
 
             int sum = digits.Sum(n => n);
             Console.WriteLine($"Number {number} digits sum is: {sum}");
         }
 
-        private static void ConvertBinaryToDecimal()
+        private static void ConvertBinaryToDecimal(String binaryNumber)
         {
-            String binarNumber = "10011010";
             ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-            double number = NumberUtils.ConvertBinaryToDecimal(binarNumber);
-            Console.WriteLine($"The decimal of {binarNumber} binary is: {number}");
+            double number = NumberUtils.ConvertBinaryToDecimal(binaryNumber);
+            Console.WriteLine($"The decimal of {binaryNumber} binary is: {number}");
         }
 
-        private static void FindOptimalBinaryRepresentation()
+        private static void FindOptimalBinaryRepresentation(int decimalNumber)
         {
             ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
             string binaryNumber = "";
-            int decimalNumber = InputUtils.GetNumberInRange(0, int.MaxValue);
             int initialDecimalNumber = decimalNumber;
 
             if(decimalNumber == 0)
@@ -205,6 +194,14 @@ namespace Homework2 {
             }
 
             Console.WriteLine($"The binary number of decimal {initialDecimalNumber} is: {binaryNumber}");
+        }
+        private static void FindSecondLargestElement(int[] arr)
+        {
+            ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
+
+            int[] sortedArray = arr.OrderByDescending(n => n).ToArray();
+
+            Console.WriteLine($"Second largest number in given array is: {sortedArray[1]}");
         }
     }
 }
