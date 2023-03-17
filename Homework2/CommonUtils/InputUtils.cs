@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework2.CommonUtils
-{
-    internal class InputUtils
+﻿namespace Homework2.CommonUtils {
+    internal static class InputUtils
     {
 
         public static int GetNumber()

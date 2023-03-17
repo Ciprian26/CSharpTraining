@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework2.CommonUtils
-{
-    internal class NumberUtils
+﻿namespace Homework2.CommonUtils {
+    internal static class NumberUtils
     {
         public static void SetArrayElements(int[] array)
         {
@@ -34,7 +27,7 @@ namespace Homework2.CommonUtils
                 number /= 10;
                 index++;
             }
-            digits.Reverse();
+            digits = (int[])digits.Reverse();
             return digits;
         }
 

@@ -1,7 +1,8 @@
-﻿namespace CSharpTraining;
+﻿using Homework2;
 
-class Program
-{
+namespace CSharpTraining;
+
+public static class Program {
     static void Main(string[] args)
     {
         HomeworkTwo.Run();
