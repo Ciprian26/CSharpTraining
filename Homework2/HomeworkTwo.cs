@@ -13,31 +13,39 @@ class HomeworkTwo {
                     Console.WriteLine("Exiting...");
                     break;
                 case 1:
+                    Console.WriteLine("Check that number is divided by 7 and 11.");
                     CheckIfNumberIsDivisibleBy7and11();
                     break;
                 case 2:
+                    Console.WriteLine("Check if year is leap.");
                     CheckIfYearIsLeap();
                     break;
                 case 3:
+                    Console.WriteLine("Check what is 47th prime number.");
                     Find47thPrimeNumber();
                     break;
                 case 4:
+                    Console.WriteLine("Fibonacci even-numbers sum that not exceed 1000.");
                     SumOfEvenFibonacciNumbers();
                     break;
                 case 5:
+                    Console.WriteLine("Find the sum of digits of a number read from the keyboard.");
                     FindSumOfDigits();
                     break;
                 case 6:
+                    Console.WriteLine("Convert Binary 10011010 to Decimal number system.");
                     ConvertBinaryToDecimal();
                     break;
                 case 7:
+                    Console.WriteLine("Find an optimal solution to the code that converts a decimal to binary.");
                     FindOptimalBinaryRepresentation();
                     break;
                 case 8:
+                    Console.WriteLine("Exiting...");
                     FindSecondLargestElement();
                     break;
                 default:
-                    Console.WriteLine("Invalid input. Please try again.");
+                    Console.WriteLine("Invalid task number. Please try again.");
                     break;
             }
         } while(selectedTask != 0);
@@ -46,19 +54,19 @@ class HomeworkTwo {
     private static int DisplayAndSelectTaskNumberToRun()
     {
         ConsoleUtils.SetConsoleColor(ConsoleColor.Yellow);
-        Console.WriteLine("---Homework #2---\n" +
-                  "1. Check that number is divided by 7 and 11\n" +
-                  "2. Check if year is leap\n" +
-                  "3. Check what is 47th prime number\n" +
-                  "4. Fibonacci even-numbers sum that not exceed 1000\n" +
+        Console.WriteLine("\n\n---Homework #2---\n" +
+                  "1. Check that number is divided by 7 and 11.\n" +
+                  "2. Check if year is leap.\n" +
+                  "3. Check what is 47th prime number.\n" +
+                  "4. Fibonacci even-numbers sum that not exceed 1000.\n" +
                   "5. Find the sum of digits of a number read from the keyboard.\n" +
-                  "0. Exit\n\n" +
+                  "0. Exit.\n\n" +
                   "-Challenge:\n" +
                   "6. Convert Binary 10011010 to Decimal number system.\n" +
-                  "7. Challenge - Find an optimal solution to the code that converts a decimal to binary.\n\n" +
+                  "7. Find an optimal solution to the code that converts a decimal to binary.\n\n" +
                   "-Removed previously but working:\n" +
-                  "8. Second largest element in an array\n\n" +
-                  "\nEnter task number");
+                  "8. Find second largest element in an array.\n\n" +
+                  "\nEnter task number: ");
 
         ConsoleUtils.SetConsoleColor(ConsoleColor.Green);
         return InputUtils.GetNumberInRange(0, 8);
@@ -82,7 +90,7 @@ class HomeworkTwo {
     private static void CheckIfYearIsLeap()
     {
         ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-        int year = InputUtils.GetNumberInRange(1, 20000);
+        int year = InputUtils.GetNumberInRange(int.MinValue, int.MaxValue);
 
         if(year % 4 == 0)
         {
@@ -162,7 +170,7 @@ class HomeworkTwo {
     private static void FindSumOfDigits()
     {
         ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-        int number = InputUtils.GetNumberInRange(1, 100000);
+        int number = InputUtils.GetNumberInRange(1, int.MaxValue);
         int[] digits = NumberUtils.GetNumberDigits(number);
 
         int sum = digits.Sum(n => n);
@@ -179,6 +187,22 @@ class HomeworkTwo {
 
     private static void FindOptimalBinaryRepresentation()
     {
-        throw new NotImplementedException();
+        ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
+        string binaryNumber = "";
+        int decimalNumber = InputUtils.GetNumberInRange(0, int.MaxValue);
+
+        if(decimalNumber == 0) {
+            Console.WriteLine($"The binary number of decimal {decimalNumber} is: 0");
+            return;
+        }
+
+        while(decimalNumber > 0)
+        {
+            int bit = decimalNumber % 2;
+            binaryNumber = bit + binaryNumber;
+            decimalNumber /= 2;
+        }
+
+        Console.WriteLine($"The binary number of decimal {decimalNumber} is: {binaryNumber}");
     }
 }
