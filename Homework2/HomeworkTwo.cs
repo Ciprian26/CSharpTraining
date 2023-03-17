@@ -14,7 +14,10 @@ class HomeworkTwo {
                     break;
                 case 1:
                     Console.WriteLine("Check that number is divided by 7 and 11.");
-                    CheckIfNumberIsDivisibleBy7and11();
+                    ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
+                    Console.WriteLine("Enter a number to check if it's divisible by 7 and 11: ");
+                    int number = InputUtils.GetNumber();
+                    CheckIfNumberIsDivisibleBy7and11(number);
                     break;
                 case 2:
                     Console.WriteLine("Check if year is leap.");
@@ -72,11 +75,8 @@ class HomeworkTwo {
         return InputUtils.GetNumberInRange(0, 8);
     }
 
-    private static void CheckIfNumberIsDivisibleBy7and11()
+    private static void CheckIfNumberIsDivisibleBy7and11(int number)
     {
-        ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
-        Console.WriteLine("Enter a number to check if it's divisible by 7 and 11: ");
-        int number = InputUtils.GetNumber();
         if(number % 7 == 0 && number % 11 == 0)
         {
             Console.WriteLine($"Number {number} is divisible by 7 and 11");
@@ -191,7 +191,8 @@ class HomeworkTwo {
         string binaryNumber = "";
         int decimalNumber = InputUtils.GetNumberInRange(0, int.MaxValue);
 
-        if(decimalNumber == 0) {
+        if(decimalNumber == 0)
+        {
             Console.WriteLine($"The binary number of decimal {decimalNumber} is: 0");
             return;
         }
