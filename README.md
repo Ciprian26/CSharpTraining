@@ -17,3 +17,6 @@ This repository contains homework assignments for the C# Training Program. Each 
 If you have any questions about my homework, please contact me on Teams (if you are from endava): Ciprian Iluta.
 
 Happy coding!
+
+Current Codefactor Code Quality rating:
+[![CodeFactor](https://www.codefactor.io/repository/github/ciprian26/csharptraining/badge)](https://www.codefactor.io/repository/github/ciprian26/csharptraining)
