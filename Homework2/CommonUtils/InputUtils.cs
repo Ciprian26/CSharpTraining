@@ -1,7 +1,6 @@
 ﻿namespace Homework2.CommonUtils {
     internal static class InputUtils
     {
-
         public static int GetNumber()
         {
             return int.Parse(Console.ReadLine());
