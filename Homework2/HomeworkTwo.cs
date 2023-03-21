@@ -1,4 +1,5 @@
-﻿using Homework2.CommonUtils;
+﻿using UtilsLibrary;
+using Homework2.CommonUtils;
 
 namespace Homework2 {
     public static class HomeworkTwo {

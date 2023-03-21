@@ -1,5 +1,5 @@
-﻿namespace Homework2.CommonUtils {
-    internal static class ConsoleUtils
+﻿namespace UtilsLibrary {
+    public static class ConsoleUtils
     {
         public static void SetConsoleColor(ConsoleColor color)
         {
