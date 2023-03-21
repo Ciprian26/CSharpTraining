@@ -1,5 +1,5 @@
-﻿namespace Homework2.CommonUtils {
-    internal static class InputUtils
+﻿namespace UtilsLibrary {
+    public static class InputUtils
     {
         public static int GetNumber()
         {
