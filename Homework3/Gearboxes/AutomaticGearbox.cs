@@ -24,5 +24,9 @@ namespace Homework3.Gearboxes {
                 Console.WriteLine($"Invalid speed, please select a speed (R, N, D, P): ");
             }
         }
+        public override string ToString()
+        {
+            return $"Gearbox Type: Automatic, Current Gearbox Speed: {CurrentSpeed}";
+        }
     }
 }
