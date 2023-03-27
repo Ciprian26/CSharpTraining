@@ -9,7 +9,7 @@ namespace Homework2 {
             do
             {
                 selectedTask = DisplayAndSelectTaskNumberToRun();
-                switch(selectedTask)
+                switch (selectedTask)
                 {
                     case 0:
                         Console.WriteLine("Exiting...");
@@ -61,7 +61,7 @@ namespace Homework2 {
                         Console.WriteLine("Invalid task number. Please try again.");
                         break;
                 }
-            } while(selectedTask != 0);
+            } while (selectedTask != 0);
         }
 
         private static int DisplayAndSelectTaskNumberToRun()
@@ -87,7 +87,7 @@ namespace Homework2 {
 
         private static void CheckIfNumberIsDivisibleBy7and11(int number)
         {
-            if(number % 7 == 0 && number % 11 == 0)
+            if (number % 7 == 0 && number % 11 == 0)
             {
                 Console.WriteLine($"Number {number} is divisible by 7 and 11");
             }
@@ -101,7 +101,7 @@ namespace Homework2 {
         {
             ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
 
-            if(year % 4 == 0)
+            if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
             {
                 Console.WriteLine($"{year} is leap.");
             }
@@ -121,14 +121,14 @@ namespace Homework2 {
             int primeCount = 0;
             int currentNumber = FirstPrimeNumber;
 
-            while(primeCount < TargetPrimeCount)
+            while (primeCount < TargetPrimeCount)
             {
-                if(NumberUtils.IsPrime(currentNumber))
+                if (NumberUtils.IsPrime(currentNumber))
                 {
                     primeCount++;
                 }
 
-                if(primeCount == TargetPrimeCount)
+                if (primeCount == TargetPrimeCount)
                 {
                     Console.WriteLine($"The {TargetPrimeCount}th prime number is: {currentNumber}");
                     break;
@@ -144,9 +144,9 @@ namespace Homework2 {
 
             int limit = 1000, sum = 0, previousFibonnaciNumber = 0, fibonnaciNumber = 1;
 
-            while(fibonnaciNumber <= limit)
+            while (fibonnaciNumber <= limit)
             {
-                if(fibonnaciNumber % 2 == 0)
+                if (fibonnaciNumber % 2 == 0)
                 {
                     sum += fibonnaciNumber;
                 }
@@ -181,13 +181,13 @@ namespace Homework2 {
             string binaryNumber = "";
             int initialDecimalNumber = decimalNumber;
 
-            if(decimalNumber == 0)
+            if (decimalNumber == 0)
             {
                 Console.WriteLine($"The binary number of decimal {decimalNumber} is: 0");
                 return;
             }
 
-            while(decimalNumber > 0)
+            while (decimalNumber > 0)
             {
                 int bit = decimalNumber % 2;
                 binaryNumber = bit + binaryNumber;
@@ -200,9 +200,23 @@ namespace Homework2 {
         {
             ConsoleUtils.SetConsoleColor(ConsoleColor.Blue);
 
-            int[] sortedArray = arr.OrderByDescending(n => n).ToArray();
+            int largest = arr[0];
+            int secondLargest = int.MinValue;
 
-            Console.WriteLine($"Second largest number in given array is: {sortedArray[1]}");
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] > largest)
+                {
+                    secondLargest = largest;
+                    largest = arr[i];
+                }
+                else if (arr[i] > secondLargest && arr[i] != largest)
+                {
+                    secondLargest = arr[i];
+                }
+            }
+
+            Console.WriteLine($"Second largest number in given array is: {secondLargest}");
         }
     }
 }
