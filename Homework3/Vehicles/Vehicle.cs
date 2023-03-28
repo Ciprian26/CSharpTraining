@@ -1,9 +1,9 @@
 ﻿namespace Homework3 {
     public class Vehicle {
-        public string Make { get; set; }
-        public string Model { get; set; }
-        public int Year { get; set; }
-        public int MaxSpeed { get; set; }
+        internal string Make { get; set; }
+        internal string Model { get; set; }
+        protected int year { get; set; }
+        protected int maxSpeed { get; set; }
 
         public virtual void Start()
         {

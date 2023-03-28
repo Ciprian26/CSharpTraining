@@ -2,30 +2,30 @@
 
 namespace Homework3.Terrains {
     public class Hill : Terrain {
-        private bool IsRocky;
+        private bool isRocky;
 
         readonly Random random = new Random();
 
         public Hill()
         {
             Name = "Hill-" + random.Next(1, 100);
-            Elevation = Level.High;
-            Weather = Weather.Cloudy;
-            Size = 1000;
-            IsRocky = true;
+            elevation = Level.High;
+            weather = Weather.Cloudy;
+            size = 1000;
+            isRocky = true;
         }
         public Hill(string name)
         {
             Name = name;
-            Elevation = Level.High;
-            Weather = Weather.Cloudy;
-            Size = 1000;
-            IsRocky = true;
+            elevation = Level.High;
+            weather = Weather.Cloudy;
+            size = 1000;
+            isRocky = true;
         }
 
         public override string ToString()
         {
-            return base.ToString() + $", Is Rocky: {IsRocky}";
+            return base.ToString() + $", Is Rocky: {isRocky}";
         }
     }
 }
