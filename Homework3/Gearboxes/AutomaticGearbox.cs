@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework3.Gearboxes {
+﻿namespace Homework3.Gearboxes {
     internal class AutomaticGearbox : Gearbox {
-        public char[] Speeds = { 'R', 'N', 'D', 'P' };
-        public char CurrentSpeed { get; set; }
+        readonly private char[] speeds = { 'R', 'N', 'D', 'P' };
+        internal char CurrentSpeed { get; set; }
 
         public AutomaticGearbox() {
             CurrentSpeed = 'P';
@@ -15,7 +9,7 @@ namespace Homework3.Gearboxes {
 
         public void SetCurrentSpeed(char selectedSpeed)
         {
-            if(Speeds.Contains(selectedSpeed))
+            if(speeds.Contains(selectedSpeed))
             {
                 CurrentSpeed = selectedSpeed;
             }

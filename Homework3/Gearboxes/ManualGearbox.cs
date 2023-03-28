@@ -1,10 +1,7 @@
-﻿using Microsoft.VisualBasic;
-using System.Security.AccessControl;
-
-namespace Homework3.Gearboxes {
+﻿namespace Homework3.Gearboxes {
     internal class ManualGearbox : Gearbox {
-        public int[] Speeds = { -1, 0, 1, 2, 3, 4, 5 };
-        public int CurrentSpeed { get; set; }
+        readonly private int[] speeds = { -1, 0, 1, 2, 3, 4, 5 };
+        internal int CurrentSpeed { get; set; }
 
         public ManualGearbox()
         {

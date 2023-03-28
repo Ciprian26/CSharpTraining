@@ -1,27 +1,22 @@
 ﻿using Homework3.Gearboxes;
 using Homework3.Terrains;
 using Homework3.Vehicles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Homework3 {
     public class Suv : Car {
-        private bool IsInOffRoadRegime;
+        private bool isInOffRoadRegime;
         public Suv(string make, string model, int year, int maxSpeed, int numberOfDoors, Gearbox gearboxType)
             : base(make, model, year, maxSpeed, numberOfDoors, gearboxType)
         {
-            IsInOffRoadRegime = false;
-            IsCarRunning = false;
+            isInOffRoadRegime = false;
+            isCarRunning = false;
         }
 
         public void PutInOffRoadRegime()
         {
-            if (IsCarRunning)
+            if (isCarRunning)
             {
-                IsInOffRoadRegime = true;
+                isInOffRoadRegime = true;
             }
             else
             {
@@ -31,11 +26,11 @@ namespace Homework3 {
 
         public override void Drive(Terrain terrain)
         {
-            if (!IsCarRunning)
+            if (!isCarRunning)
             {
                 Console.WriteLine("Start the car first.");
             }
-            else if ((terrain is Hill) && IsInOffRoadRegime)
+            else if ((terrain is Hill) && isInOffRoadRegime)
             {
                 Console.WriteLine("You are driving on hills.");
             }
@@ -55,7 +50,7 @@ namespace Homework3 {
 
         public override string ToString()
         {
-            return $"Type: SUV, " + base.ToString() + $", Off-Road Regime: {IsInOffRoadRegime}";
+            return $"Type: SUV, " + base.ToString() + $", Off-Road Regime: {isInOffRoadRegime}";
         }
     }
 }

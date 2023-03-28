@@ -4,19 +4,19 @@ using Homework3.Vehicles;
 
 namespace Homework3 {
     public class Sedan : Car {
-        private bool IsInComfortRegime;
+        private bool isInComfortRegime;
         public Sedan(string make, string model, int year, int maxSpeed, int numberOfDoors, Gearbox gearboxType)
             : base(make, model, year, maxSpeed, numberOfDoors, gearboxType)
         {
-            IsInComfortRegime = false;
-            IsCarRunning = false;
+            isInComfortRegime = false;
+            isCarRunning = false;
         }
 
         public void PutInComfortRegime()
         {
-            if (IsCarRunning)
+            if (isCarRunning)
             {
-                IsInComfortRegime = true;
+                isInComfortRegime = true;
                 Console.WriteLine("Car is in comfort regime.");
             }
             else
@@ -27,15 +27,15 @@ namespace Homework3 {
 
         public override void Drive(Terrain terrain)
         {
-            if (!IsCarRunning)
+            if (!isCarRunning)
             {
                 Console.WriteLine("Start the car first.");
             }
-            else if ((terrain is City) && IsInComfortRegime)
+            else if ((terrain is City) && isInComfortRegime)
             {
                 Console.WriteLine("You are driving in the city... but with comfort.");
             }
-            else if ((terrain is City) && !IsInComfortRegime)
+            else if ((terrain is City) && !isInComfortRegime)
             {
                 Console.WriteLine("You are driving in the city");
             }
@@ -47,7 +47,7 @@ namespace Homework3 {
 
         public override string ToString()
         {
-            return $"Type: Sedan, " + base.ToString() + $", Comfort Regime: {IsInComfortRegime}";
+            return $"Type: Sedan, " + base.ToString() + $", Comfort Regime: {isInComfortRegime}";
         }
     }
 }
