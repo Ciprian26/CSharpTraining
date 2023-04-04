@@ -98,17 +98,13 @@ namespace Homework4.Implementations.ArrayType
             return participantsAboveScoreArray;
         }
 
-        public Participant[] SortParticipantsArrayAscending()
+        public Participant[] SortParticipantsArrayAscending(Participant[] participantArrayToSort = null)
         {
-            Participant[] participantsAscending = new Participant[participantsArray.Length];
-            Array.Copy(participantsArray, participantsAscending, participantsArray.Length);
+            if(participantArrayToSort == null)
+            {
+                participantArrayToSort = participantsArray;
+            }
 
-            Array.Sort(participantsAscending, (participant, nextParticipant) => participant.GetScore().CompareTo(nextParticipant.GetScore()));
-            return participantsAscending;
-        }
-
-        public Participant[] SortParticipantsArrayAscending(Participant[] participantArrayToSort)
-        {
             Participant[] participantsAscending = new Participant[participantArrayToSort.Length];
             Array.Copy(participantArrayToSort, participantsAscending, participantArrayToSort.Length);
 

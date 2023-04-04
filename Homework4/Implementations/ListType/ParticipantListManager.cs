@@ -71,18 +71,14 @@ namespace Homework4.Implementations.ListType
             return participantsBelowScore;
         }
 
-        public List<Participant> SortParticipantsAscendingByScore()
+        public List<Participant> SortParticipantsAscendingByScore(List<Participant> participantList = null)
         {
-            List<Participant> participantListAscending = participantsList;
+            if(participantList == null)
+            {
+                participantList = participantsList;
+            }
 
-            participantListAscending.Sort((participant, nextParticipant) => participant.GetScore().CompareTo(nextParticipant.GetScore()));
-
-            return participantListAscending;
-        }
-
-        public List<Participant> SortParticipantsAscendingByScore(List<Participant> participantList)
-        {
-            List<Participant> participantListAscending = participantList;
+            List<Participant> participantListAscending = new List<Participant>(participantList);
 
             participantListAscending.Sort((participant, nextParticipant) => participant.GetScore().CompareTo(nextParticipant.GetScore()));
 
