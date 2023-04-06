@@ -2,10 +2,8 @@
 using static UtilsLibrary.InputUtils;
 using static UtilsLibrary.ArrayUtils;
 
-namespace Homework4.Implementations.ArrayType
-{
-    public static class ProgramArray
-    {
+namespace Homework4.Implementations.ArrayType {
+    public static class ProgramArray {
         public static void Run()
         {
             ParticipantArrayManager participantsArray = new ParticipantArrayManager();

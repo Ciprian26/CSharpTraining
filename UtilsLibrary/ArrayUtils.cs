@@ -6,8 +6,11 @@
 
             for(int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine($"{elementNumber}. {array[i]}");
-                elementNumber++;
+                if(array[i] != null)
+                {
+                    Console.WriteLine($"{elementNumber}. {array[i]}");
+                    elementNumber++;
+                }
             }
         }
     }
