@@ -1,9 +1,7 @@
 ﻿using static UtilsLibrary.ArrayUtils;
 
-namespace Homework4.Implementations.ArrayType
-{
-    public class ParticipantArrayManager
-    {
+namespace Homework4.Implementations.ArrayType {
+    public class ParticipantArrayManager {
         private Participant[] participantsArray = new Participant[0];
         private int currentArrayLength = 0;
 
@@ -44,14 +42,13 @@ namespace Homework4.Implementations.ArrayType
 
         public void DeleteParticipantFromPosition(int position)
         {
+            for (int i = position - 1; i < participantsArray.Length - 1; i++)
+            {
+                participantsArray[i] = participantsArray[i + 1];
+            }
             currentArrayLength--;
-            Participant[] newParticipantArray = new Participant[currentArrayLength];
-
-            Array.Copy(participantsArray, 0, newParticipantArray, 0, position - 1);
-            Array.Copy(participantsArray, position, newParticipantArray, position - 1, currentArrayLength - position + 1);
-
-            UpdateParticipantsArray(newParticipantArray);
-            Console.WriteLine($"Delete participant from position {position}");
+            Array.Resize(ref participantsArray, currentArrayLength);
+            Console.WriteLine($"Deleted participant from position {position}");
         }
 
         public void ChangeParticipantScoreById(int id, int newScore)
@@ -100,7 +97,7 @@ namespace Homework4.Implementations.ArrayType
 
         public Participant[] SortParticipantsArrayAscending(Participant[] participantArrayToSort = null)
         {
-            if(participantArrayToSort == null)
+            if (participantArrayToSort == null)
             {
                 participantArrayToSort = participantsArray;
             }
@@ -123,6 +120,54 @@ namespace Homework4.Implementations.ArrayType
                 counter++;
             }
             return sum / counter;
+        }
+
+        //Sort method without copying to another Array
+        public void SortParticipantsByScore()
+        {
+            int[] index = new int[participantsArray.Length];
+            for (int i = 0; i < participantsArray.Length; i++)
+            {
+                index[i] = i;
+            }
+
+            for (int i = 0; i < participantsArray.Length - 1; i++)
+            {
+                int min = i;
+                for (int j = i + 1; j < participantsArray.Length; j++)
+                {
+                    if (participantsArray[index[min]].GetScore() > participantsArray[index[j]].GetScore())
+                    {
+                        min = j;
+                    }
+                }
+
+                if (min != i)
+                {
+                    int temp = index[min];
+                    index[min] = index[i];
+                    index[i] = temp;
+                }
+            }
+
+            for (int i = 0; i < participantsArray.Length; i++)
+            {
+                Console.Write($"{i + 1}. {participantsArray[index[i]]}\n");
+            }
+        }
+
+        //Add method with doubling array size
+        public void AddParticipantWithDoubleSize(Participant participant)
+        {
+            if (currentArrayLength == participantsArray.Length)
+            {
+                int newLength = participantsArray.Length == 0 ? 1 : participantsArray.Length * 2;
+                Participant[] newArray = new Participant[newLength];
+                Array.Copy(participantsArray, newArray, currentArrayLength);
+                participantsArray = newArray;
+            }
+
+            participantsArray[currentArrayLength++] = participant;
         }
     }
 }
