@@ -1,24 +1,18 @@
 ﻿using static UtilsLibrary.RandomUtils;
 
 namespace Homework6.Person.Workers {
-    internal class TicketSeller : ZooWorker, IDescription {
+    public class TicketSeller : ZooWorker, IDescription {
         public static int TotalTicketsSold { get; private set; }
         public int TicketsSold { get; set; }
 
-        public TicketSeller(String name, int age, int salary)
+        public TicketSeller(String name, int age, int salary) : base(name, age, salary)
         {
-            Name = name;
-            Age = age;
-            this.salary = salary;
         }
-        public TicketSeller(int age, int salary)
+        public TicketSeller(int age, int salary) : base("Worker-" + GetRandomNumberInRange(1, 100).ToString(), age, salary)
         {
-            Name = "Worker-" + GetRandomNumberInRange(1, 100).ToString();
-            Age = age;
-            this.salary = salary;
         }
 
-        public TicketSeller()
+        public TicketSeller() : base()
         {
             TicketsSold = 0;
         }

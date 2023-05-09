@@ -5,17 +5,11 @@ namespace Homework6.Person.Workers {
     public class CareWorker : ZooWorker, IDescription {
         public List<Animal> AnimalsInCare { get; set; }
 
-        public CareWorker(String name, int age, int salary)
+        public CareWorker(String name, int age, int salary) : base(name, age, salary)
         {
-            Name = name;
-            Age = age;
-            this.salary = salary;
         }
-        public CareWorker(int age, int salary)
+        public CareWorker(int age, int salary) : base("Worker-" + GetRandomNumberInRange(1, 100).ToString(), age, salary)
         {
-            Name = "Worker-" + GetRandomNumberInRange(1, 100).ToString();
-            Age = age;
-            this.salary = salary;
         }
 
         public void FeedAnimalsInCare()
