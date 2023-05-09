@@ -1,7 +1,7 @@
 ﻿namespace Homework6.Person {
     public class Person {
-        public String Name;
+        public String Name { get; set; }
 
-        public int Age;
+        public int Age { get; set; }
     }
 }
