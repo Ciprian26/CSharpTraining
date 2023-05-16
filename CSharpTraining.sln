@@ -18,6 +18,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework4", "Homework4\Home
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework6", "Homework6\Homework6.csproj", "{AC077034-FBB1-406B-A453-5F0F19A75298}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3B83C289-3CCE-462B-9B20-613FC98523ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalZooWorkers.NunitTests", "Tests\InternalZooWorkers.NunitTests\InternalZooWorkers.NunitTests.csproj", "{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,9 +52,16 @@ Global
 		{AC077034-FBB1-406B-A453-5F0F19A75298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC077034-FBB1-406B-A453-5F0F19A75298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC077034-FBB1-406B-A453-5F0F19A75298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F} = {3B83C289-3CCE-462B-9B20-613FC98523ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {895AAABD-9EB2-4834-9961-6F6D650303E1}
