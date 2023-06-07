@@ -1,5 +1,7 @@
-﻿namespace Net_Basic.Entities {
-    public class Movie {
+﻿namespace Net_Basic.Part1.Entities
+{
+    public class Movie
+    {
         public int MovieId { get; set; }
         public string Title { get; set; } = string.Empty;
         public int ReleaseYear { get; set; }

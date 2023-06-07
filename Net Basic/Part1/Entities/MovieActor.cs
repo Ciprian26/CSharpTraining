@@ -1,5 +1,7 @@
-﻿namespace Net_Basic.Entities {
-    public class MovieActor {
+﻿namespace Net_Basic.Part1.Entities
+{
+    public class MovieActor
+    {
         public int MovieId { get; set; }
         public int ActorId { get; set; }
         public Movie? Movie { get; set; }

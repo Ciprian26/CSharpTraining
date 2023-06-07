@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Net_Basic.DataAccessLayer;
-using Net_Basic.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Net_Basic.Part1.DataAccessLayer;
+using Net_Basic.Part1.Entities;
 
-namespace ConsoleApp {
-    static class Program {
+namespace Net_Basic.Part1
+{
+    static class Program
+    {
         static void Main(string[] args)
         {
             using (var context = new MovieContext())

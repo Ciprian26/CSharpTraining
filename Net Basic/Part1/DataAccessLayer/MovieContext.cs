@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Net_Basic.Entities;
+using Net_Basic.Part1.Entities;
 
-namespace Net_Basic.DataAccessLayer {
-    public class MovieContext : DbContext {
+namespace Net_Basic.Part1.DataAccessLayer
+{
+    public class MovieContext : DbContext
+    {
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<MovieActor> MovieActors { get; set; }
