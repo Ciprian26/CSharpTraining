@@ -16,11 +16,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework4", "Homework4\Home
 		{CE671BD5-607E-40F1-9830-9507BEEF5360} = {CE671BD5-607E-40F1-9830-9507BEEF5360}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework6", "Homework6\Homework6.csproj", "{AC077034-FBB1-406B-A453-5F0F19A75298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework6", "Homework6\Homework6.csproj", "{AC077034-FBB1-406B-A453-5F0F19A75298}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3B83C289-3CCE-462B-9B20-613FC98523ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalZooWorkers.NunitTests", "Tests\InternalZooWorkers.NunitTests\InternalZooWorkers.NunitTests.csproj", "{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternalZooWorkers.NunitTests", "Tests\InternalZooWorkers.NunitTests\InternalZooWorkers.NunitTests.csproj", "{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net Basic", "Net Basic\Net Basic.csproj", "{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
