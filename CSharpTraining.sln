@@ -22,7 +22,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3B83C289
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternalZooWorkers.NunitTests", "Tests\InternalZooWorkers.NunitTests\InternalZooWorkers.NunitTests.csproj", "{1ACEA153-1C60-40B9-80BF-F171FDA7BD0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net Basic", "Net Basic\Net Basic.csproj", "{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net Basic", "Net Basic\Net Basic.csproj", "{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "Net Basic\Part2\Basic_DotNet_part2\WebApplication1.csproj", "{6A8DA578-B189-4672-ABF3-06D5EE0DA989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B6F5CD-3E57-4EF7-94A5-BF1C64F53FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8DA578-B189-4672-ABF3-06D5EE0DA989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8DA578-B189-4672-ABF3-06D5EE0DA989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8DA578-B189-4672-ABF3-06D5EE0DA989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8DA578-B189-4672-ABF3-06D5EE0DA989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
