@@ -1,0 +1,11 @@
+1|Blue Jay|Small songbird with vibrant blue feathers and a crest on its head.
+2|Robin|Medium-sized bird with a reddish-orange breast and a melodious song.
+3|Hummingbird|Tiny bird known for its ability to hover in mid-air and its iridescent feathers.
+4|Eagle|Large bird of prey with a strong beak and excellent vision.
+5|Woodpecker|Bird with a specialized beak for drumming on trees and extracting insects.
+6|Owl|Nocturnal bird known for its distinct hooting call and keen night vision.
+7|Finch|Small bird with a melodious song and a variety of colorful plumage.
+8|Pelican|Large water bird with a long bill and a throat pouch for catching fish.
+9|Sparrow|Small, common bird known for its cheerful chirping and adaptability.
+10|Hawk|Majestic bird of prey with keen eyesight and powerful wings.
+11|Owl|Nocturnal bird known for its distinct hooting call and keen night vision.
